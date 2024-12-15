@@ -18,7 +18,7 @@ bool CanPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
         if( flowerbed[0] == 0 )                                             
         counter++;
     }
-    else for ( int i = 0 ; i < flowerbedSize ; i++ ) {                            //se for maior que 1,passa por todo o array
+    else for ( int i = 0 ; i < flowerbedSize ; i++ ) {                      //se for maior que 1,passa por todo o array
         if ( flag == 0 ) {
                 if ( i == 0 ) {                                             //checa se é o primeiro termo
                     if ( flowerbed[i] == 0 && flowerbed[i+1] == 0 ) {       //se o primeiro termo for vazio
@@ -33,9 +33,9 @@ bool CanPlaceFlowers(int* flowerbed, int flowerbedSize, int n) {
                         }
                     }
                     else if ( flowerbed[i-1] == 0 && flowerbed[i] == 0 && flowerbed[i+1] == 0 ) {
-                        counter++;                                      //testa se o anterior, atual e proximo são
-                        flag++;                                         //vazios, se sim, aumenta o contador e
-                    }                                                   //ativa a flag
+                        counter++;                                          //testa se o anterior, atual e proximo são
+                        flag++;                                             //vazios, se sim, aumenta o contador e
+                    }                                                       //ativa a flag
             }
             else
                 flag = 0;
